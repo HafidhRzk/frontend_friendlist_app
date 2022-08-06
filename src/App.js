@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Chart from './pages/chart';
+import FriendList from './pages/friendList';
+import InputList from './pages/inputList';
+import UpdateList from './pages/updateList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route exact path="/" element={<FriendList />} />
+      <Route path="/chart" element={<Chart />} />
+      <Route path="/inputlist" element={<InputList />} />
+      <Route path="/updatelist/:id" element={<UpdateList />} />
+    </Routes>
   );
 }
 
