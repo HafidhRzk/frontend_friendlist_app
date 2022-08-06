@@ -95,7 +95,8 @@ export default function InputForm() {
                 </Form.Group>
                 <Form.Group className="mb-3 py-3">
                     <Form.Control
-                        type="text"
+                        type="number"
+                        min="0"
                         placeholder="Input Age"
                         onChange={handleChange}
                         name="age"
