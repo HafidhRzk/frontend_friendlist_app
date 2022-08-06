@@ -1,4 +1,5 @@
 import { Nav, Navbar, Container } from 'react-bootstrap';
+import { Link } from "react-router-dom"
 
 export default function Navibar() {
     return(
