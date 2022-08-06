@@ -77,13 +77,15 @@ export default function UpdateForm() {
                     />
                 </Form.Group>
                 <Form.Group className="mb-3 py-3">
-                    <Form.Control
-                        type="text"
-                        placeholder="Update Gender"
-                        onChange={handleChange}
+                    <Form.Select
                         name="gender"
                         value={gender}
-                    />
+                        onChange={handleChange}
+                    >
+                        <option value="" hidden selected>Select gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </Form.Select>
                 </Form.Group>
                 <Form.Group className="mb-3 py-3">
                     <Form.Control
